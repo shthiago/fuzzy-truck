@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "fuzzy-truck"
+version = "0.1.0"
+description = ""
+authors = ["Thiago Sant' Helena <thiago.sant.helena@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+scikit-fuzzy = "^0.4.1"
+loguru = "^0.3.2"
+networkx = "=2.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+jupyter = "^1.0"
+matplotlib = "^3.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
