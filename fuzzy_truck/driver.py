@@ -97,10 +97,10 @@ class Driver:
             ctrl.Rule(self.angle['large_below_90'] & self.x['left_big'], self.movement['PB']),
             ctrl.Rule(self.angle['medium_below_90'] & self.x['left_big'], self.movement['PB']),
             ctrl.Rule(self.angle['small_below_90'] & self.x['left_big'], self.movement['PB']),
-            ctrl.Rule(self.angle['at_90'] & self.x['left_big'], self.movement['PB']),
+            ctrl.Rule(self.angle['at_90'] & self.x['left_big'], self.movement['PM']),
             ctrl.Rule(self.angle['small_above_90'] & self.x['left_big'], self.movement['PM']),
-            ctrl.Rule(self.angle['medium_above_90'] & self.x['left_big'], self.movement['NB']),
-            ctrl.Rule(self.angle['large_above_90'] & self.x['left_big'], self.movement['NB']),
+            ctrl.Rule(self.angle['medium_above_90'] & self.x['left_big'], self.movement['PS']),
+            ctrl.Rule(self.angle['large_above_90'] & self.x['left_big'], self.movement['NS']),
             
             # Left Medium
             ctrl.Rule(self.angle['large_below_90'] & self.x['left_medium'], self.movement['PB']),
@@ -108,35 +108,35 @@ class Driver:
             ctrl.Rule(self.angle['small_below_90'] & self.x['left_medium'], self.movement['PM']),
             ctrl.Rule(self.angle['at_90'] & self.x['left_medium'], self.movement['PM']),
             ctrl.Rule(self.angle['small_above_90'] & self.x['left_medium'], self.movement['PS']),
-            ctrl.Rule(self.angle['medium_above_90'] & self.x['left_medium'], self.movement['NM']),
+            ctrl.Rule(self.angle['medium_above_90'] & self.x['left_medium'], self.movement['NS']),
             ctrl.Rule(self.angle['large_above_90'] & self.x['left_medium'], self.movement['NM']),
 
             # Centered
-            ctrl.Rule(self.angle['large_below_90'] & self.x['centered'], self.movement['PB']),
+            ctrl.Rule(self.angle['large_below_90'] & self.x['centered'], self.movement['PM']),
             ctrl.Rule(self.angle['medium_below_90'] & self.x['centered'], self.movement['PM']),
             ctrl.Rule(self.angle['small_below_90'] & self.x['centered'], self.movement['PS']),
             ctrl.Rule(self.angle['at_90'] & self.x['centered'], self.movement['ZE']), # Obvious
-            ctrl.Rule(self.angle['small_above_90'] & self.x['centered'], self.movement['NM']),
+            ctrl.Rule(self.angle['small_above_90'] & self.x['centered'], self.movement['NS']),
             ctrl.Rule(self.angle['medium_above_90'] & self.x['centered'], self.movement['NM']),
-            ctrl.Rule(self.angle['large_above_90'] & self.x['centered'], self.movement['NB']),
+            ctrl.Rule(self.angle['large_above_90'] & self.x['centered'], self.movement['NM']),
 
             # Right Medium
-            ctrl.Rule(self.angle['large_below_90'] & self.x['right_medium'], self.movement['PB']),
-            ctrl.Rule(self.angle['medium_below_90'] & self.x['right_medium'], self.movement['PM']),
-            ctrl.Rule(self.angle['small_below_90'] & self.x['right_medium'], self.movement['PS']),
+            ctrl.Rule(self.angle['large_below_90'] & self.x['right_medium'], self.movement['PM']),
+            ctrl.Rule(self.angle['medium_below_90'] & self.x['right_medium'], self.movement['PS']),
+            ctrl.Rule(self.angle['small_below_90'] & self.x['right_medium'], self.movement['NS']),
             ctrl.Rule(self.angle['at_90'] & self.x['right_medium'], self.movement['NM']),
-            ctrl.Rule(self.angle['small_above_90'] & self.x['right_medium'], self.movement['NS']),
-            ctrl.Rule(self.angle['medium_above_90'] & self.x['right_medium'], self.movement['PM']),
-            ctrl.Rule(self.angle['large_above_90'] & self.x['right_medium'], self.movement['PM']),
+            ctrl.Rule(self.angle['small_above_90'] & self.x['right_medium'], self.movement['NM']),
+            ctrl.Rule(self.angle['medium_above_90'] & self.x['right_medium'], self.movement['NB']),
+            ctrl.Rule(self.angle['large_above_90'] & self.x['right_medium'], self.movement['NB']),
 
             # Right Big
-            ctrl.Rule(self.angle['large_below_90'] & self.x['right_big'], self.movement['PM']),
-            ctrl.Rule(self.angle['medium_below_90'] & self.x['right_big'], self.movement['PS']),
-            ctrl.Rule(self.angle['small_below_90'] & self.x['right_big'], self.movement['ZE']),
-            ctrl.Rule(self.angle['at_90'] & self.x['right_big'], self.movement['NB']),
-            ctrl.Rule(self.angle['small_above_90'] & self.x['right_big'], self.movement['NM']),
-            ctrl.Rule(self.angle['medium_above_90'] & self.x['right_big'], self.movement['PB']),
-            ctrl.Rule(self.angle['large_above_90'] & self.x['right_big'], self.movement['PB']),
+            ctrl.Rule(self.angle['large_below_90'] & self.x['right_big'], self.movement['PS']),
+            ctrl.Rule(self.angle['medium_below_90'] & self.x['right_big'], self.movement['NS']),
+            ctrl.Rule(self.angle['small_below_90'] & self.x['right_big'], self.movement['NM']),
+            ctrl.Rule(self.angle['at_90'] & self.x['right_big'], self.movement['NM']),
+            ctrl.Rule(self.angle['small_above_90'] & self.x['right_big'], self.movement['NB']),
+            ctrl.Rule(self.angle['medium_above_90'] & self.x['right_big'], self.movement['NB']),
+            ctrl.Rule(self.angle['large_above_90'] & self.x['right_big'], self.movement['NB']),
         ]
         
     def _setup_fuzzy_controller(self):
