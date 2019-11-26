@@ -114,9 +114,9 @@ class Driver:
             # Centered
             ctrl.Rule(self.angle['large_below_90'] & self.x['centered'], self.movement['PM']),
             ctrl.Rule(self.angle['medium_below_90'] & self.x['centered'], self.movement['PM']),
-            ctrl.Rule(self.angle['small_below_90'] & self.x['centered'], self.movement['PS']),
+            ctrl.Rule(self.angle['small_below_90'] & self.x['centered'], self.movement['PM']),
             ctrl.Rule(self.angle['at_90'] & self.x['centered'], self.movement['ZE']), # Obvious
-            ctrl.Rule(self.angle['small_above_90'] & self.x['centered'], self.movement['NS']),
+            ctrl.Rule(self.angle['small_above_90'] & self.x['centered'], self.movement['NM']),
             ctrl.Rule(self.angle['medium_above_90'] & self.x['centered'], self.movement['NM']),
             ctrl.Rule(self.angle['large_above_90'] & self.x['centered'], self.movement['NM']),
 
@@ -205,7 +205,6 @@ class Driver:
         self.simulator.input['x_position'] = x * 10
 
         self.simulator.compute()
-
 
         self.make_movement(self.simulator.output['movement']/30)
         
