@@ -7,7 +7,7 @@ authors = ["Thiago Sant' Helena <thiago.sant.helena@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.6"
 scikit-fuzzy = "^0.4.1"
-loguru = "^0.3.2"
+loguru = "^0.5.3"
 networkx = "=2.3"
 
 [tool.poetry.dev-dependencies]
